@@ -41,6 +41,12 @@ namespace kwonyonje2649061
             }
         }
     public:
+        dayOfYear( int monthvalue=1, int dayvalue=1 ):month{monthvalue}, day{dayvalue}
+        {
+            testMonth();
+            testDay();
+        }
+
         void input()
         {
             std::cout << "Enter month as a number: ";
@@ -50,12 +56,12 @@ namespace kwonyonje2649061
         }
         void setMonth(int m) {month = m; testMonth();}
         void setDay(int d) {day = d; testDay();}
-        void print()
+        void print() const
         {
             std::cout << month << "/" << day <<std::endl;
         }
-        int getMonth() { return month; }
-        int getDay() { return day; }
+        int getMonth() const { return month; }
+        int getDay() const { return day; }
     };
 
 }
